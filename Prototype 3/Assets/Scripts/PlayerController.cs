@@ -7,9 +7,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
 
     public float jumpForce = 10;
+    public float doubleJumpForce = 10;
     public float gravityModifier;
 
     public bool isOnGround = true;
+    private bool doubleJumpUsed = false;
 
     public bool gameOver = false;
 
@@ -20,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     public AudioClip jumpSound;
     public AudioClip crashSound;
+
+    public bool speedUp = false;
 
     private AudioSource playerAudio;
 
@@ -35,6 +39,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speedUp = true;
+            playerAnim.SetFloat("Speed_Multiplier", 2.0f);
+        }else if (speedUp)
+        {
+            speedUp = false;
+            playerAnim.SetFloat("Speed_Multiplier", 1.0f);
+        }
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -43,6 +56,14 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
+        else if (Input.GetKeyDown(KeyCode.Space) && !isOnGround && !doubleJumpUsed && !gameOver)
+        {
+            playerRb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
+            doubleJumpUsed = false;
+            playerAnim.Play("Running_Jump", 3, 0f);
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
+        }
+            
     }
 
     private void OnCollisionEnter(Collision collision)
