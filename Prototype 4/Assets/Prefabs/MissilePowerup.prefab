@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4456678517072262023}
   - component: {fileID: 5946304470628396232}
   - component: {fileID: 8023513145934169261}
+  - component: {fileID: -1567514241395627454}
   m_Layer: 0
   m_Name: MissilePowerup
-  m_TagString: MissilePowerup
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9843216, y: 0.9183879, z: 0.200076}
   m_Center: {x: 0.000000014901161, y: 0.00000011920932, z: 0.000000014901165}
+--- !u!114 &-1567514241395627454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664886474980460954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613465971faf3c349ae325a9483afc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpType: 2

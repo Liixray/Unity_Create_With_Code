@@ -38,7 +38,7 @@ public class Missile : MonoBehaviour
             Vector3 awayFromMissile = (collision.gameObject.transform.position - missileRb.transform.position).normalized;
 
             Destroy(gameObject);
-            enemyRigidbody.AddForce(awayFromMissile * 30f, ForceMode.Impulse);
+            enemyRigidbody.AddForce(awayFromMissile * 120f, ForceMode.Impulse);
         }
     }
 }

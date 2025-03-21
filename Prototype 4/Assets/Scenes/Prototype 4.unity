@@ -258,6 +258,7 @@ MonoBehaviour:
   powerupPrefabs:
   - {fileID: 4278373199660602187, guid: 96ad2c57bb9c05c45ad5ebee362e0707, type: 3}
   - {fileID: 664886474980460954, guid: 2a56de92a1f12d74692f38279dd444c6, type: 3}
+  - {fileID: 8909156284862105912, guid: 2e7221675bfb80847b20e181cf16efe4, type: 3}
 --- !u!4 &303148356
 Transform:
   m_ObjectHideFlags: 0
@@ -302,7 +303,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776467086}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 7.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -419,11 +420,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d91da6c54e92d4e83cc88d9ba81e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   hasPowerup: 0
   powerupIndicator: {fileID: 2023011307}
+  currentPowerUp: 0
   missilePrefab: {fileID: 1784758208635443350, guid: 6c4d845562c1eda47a45123f09a703d1,
     type: 3}
+  hangTime: 0.75
+  smashSpeed: 6
+  explosionForce: 75
+  explosionsRadius: 20
 --- !u!1 &1211016355
 GameObject:
   m_ObjectHideFlags: 0
