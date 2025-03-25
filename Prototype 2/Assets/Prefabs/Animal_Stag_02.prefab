@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 8233269165383374159}
   - component: {fileID: 7916696234390924647}
   - component: {fileID: 4376913295386980742}
-  - component: {fileID: 911141911185162293}
   - component: {fileID: -2684276561938379091}
-  - component: {fileID: 2803245577705127163}
   - component: {fileID: 4001654276930803741}
+  - component: {fileID: -5787745777219981596}
+  - component: {fileID: -8276502585595225440}
+  - component: {fileID: -6334301164751557016}
   m_Layer: 0
   m_Name: Animal_Stag_02
   m_TagString: Animal
@@ -82,18 +83,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
---- !u!114 &911141911185162293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785918334928353036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c97908005995304793449f2d2db8b51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &-2684276561938379091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -115,18 +104,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15, y: 0.48777756, z: 0.41057277}
   m_Center: {x: 0, y: 0.22202753, z: 0.03578056}
---- !u!114 &2803245577705127163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785918334928353036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44b28401261cd4945a99f358bd270595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4001654276930803741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +118,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hungerSlider: {fileID: 7998852070941904067}
   amountToBeFed: 4
+--- !u!114 &-5787745777219981596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785918334928353036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c52ee72091692143869a36cdefe1fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8276502585595225440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785918334928353036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e62e9a8a22fac478a927ce940e28f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6334301164751557016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785918334928353036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c0e1f24e2ce4a5b9bf1f3a7499cd45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 6588622144459686321, guid: 7760f5712f02b4d4db94fda56c5a67db, type: 3}
+  amountToPool: 20
 --- !u!1 &1663668078128013212
 GameObject:
   m_ObjectHideFlags: 0

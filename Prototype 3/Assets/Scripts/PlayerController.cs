@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space) && !isOnGround && !doubleJumpUsed && !gameOver)
         {
             playerRb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
-            doubleJumpUsed = false;
+            doubleJumpUsed = true;
             playerAnim.Play("Running_Jump", 3, 0f);
             playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+            doubleJumpUsed = false;
             dirtParticle.Play();
         } else if (collision.gameObject.CompareTag("Obstacle"))
         {
